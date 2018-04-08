@@ -61,7 +61,7 @@ while gen > 0:
     GA.roulette_wheel(all_fitness)
     best.append(GA.get_best(all_fitness))
     if is_over(best) and best[-1][-1][1] < maxVolume:
-        print("在经过{}次迭代后找到可行的解".format(generation-gen))
+        print("在经过{}次迭代后找到可能的解".format(generation-gen))
         print(best[-1][0:len(best[-1])-1],end=" ")
         print("总重量 {} 总价值 {}".format(best[-1][-1][1],best[-1][-1][2]))
         break
