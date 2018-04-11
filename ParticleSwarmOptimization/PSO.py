@@ -55,4 +55,5 @@ class ParticleSwarmOptimization():
                 self.X[i] = self.X[i] + self.V[i]
             fitness.append(self.most_fit)
             print(self.most_fit)
+        print(self.best_position)
         return fitness
