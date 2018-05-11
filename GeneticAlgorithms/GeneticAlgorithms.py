@@ -44,6 +44,18 @@ class GeneticAlgorithm:
                 i = m
         return self.population[i]
 
+    def mutation(self):
+        i = self.population_size * 0.10
+        j = int(len(self.population[0]) * 0.3)
+        size = len(self.population) - 1
+        length = len(self.population[0])-1
+        while i >= 0:
+            for t in range(j):
+                ind = random.randint(0, size)
+                pos = random.randint(0, length)
+                self.population[ind][pos] ^= 1
+            i -= 1
+
     def update_population(self, generations):
         i = generations
         while i > 0:
